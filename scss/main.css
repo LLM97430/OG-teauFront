@@ -16,13 +16,42 @@ footer.footer{
   position: absolute;
   bottom:0;
   width: 100%;
-  font-size : 1.15rem
+  font-size : 1.15rem;
+  color: #B19A75;
 }
 
 h3{
   font-family: "Agbalumo", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+
+.hero-scene{
+  height: 1492px;
+  position:relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &::before{
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-image: url(../images/cacao.jpg);
+    background-size: cover;
+    filter: brightness(0.5);
+  }
+  * {
+    position:relative
+  }
+}
+
+.hero-scene-content{
+  top: 20%;
+  font-size: 1.75em;
 }
 
 :root {
@@ -73,10 +102,10 @@ h3{
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 1rem;
+  --bs-body-font-size: 1.25rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #B19A75;
+  --bs-body-color: #DAD4C4;
   --bs-body-bg: #FFFAF2;
   --bs-border-width: 1px;
   --bs-border-style: solid;
@@ -136,6 +165,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 h1, .h1 {
+  font-family: "Agbalumo";
   font-size: calc(1.375rem + 1.5vw);
 }
 @media (min-width: 1200px) {
@@ -2809,8 +2839,9 @@ textarea.form-control-lg {
   --bs-btn-bg: transparent;
   --bs-btn-border-width: 1px;
   --bs-btn-border-color: transparent;
-  --bs-btn-border-radius: 0.375rem;
+  --bs-btn-border-radius: 0.5rem;
   --bs-btn-hover-border-color: transparent;
+  --bs-btn-hover-bg: #CDA9A9;
   --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
   --bs-btn-disabled-opacity: 0.65;
   --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
@@ -2878,8 +2909,7 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #0d6efd;
-  --bs-btn-border-color: #0d6efd;
+  --bs-btn-bg: #4A3030;
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: rgb(11.05, 93.5, 215.05);
   --bs-btn-hover-border-color: rgb(10.4, 88, 202.4);
@@ -2891,6 +2921,7 @@ textarea.form-control-lg {
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #0d6efd;
   --bs-btn-disabled-border-color: #0d6efd;
+  --bs-btn-font-size: 2rem;
 }
 
 .btn-secondary {
@@ -3767,7 +3798,7 @@ textarea.form-control-lg {
   --bs-navbar-active-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-brand-padding-y: 0.3125rem;
   --bs-navbar-brand-margin-end: 1rem;
-  --bs-navbar-brand-font-size: 1.75rem;
+  --bs-navbar-brand-font-size: 2.25rem;
   --bs-navbar-brand-color: rgba(var(--bs-primary-rgb));
   --bs-navbar-brand-hover-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-nav-link-padding-x: 0.5rem;
@@ -3785,6 +3816,7 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+  height: 136px;
 }
 .navbar > .container,
 .navbar > .container-fluid,
