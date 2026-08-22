@@ -32,6 +32,7 @@ h3{
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 15px;
 
   &::before{
     content:"";
@@ -63,13 +64,25 @@ h3{
 
 .image-card{
   position: relative;
+
   &:hover{
     .titre-image{
       opacity: 1;
+      position: absolute;
+      top: 75%;
     }
 
     img{
       filter: brightness(0.3);
+    }
+    .action-image-buttons{
+      position: absolute;
+      padding: 5px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
     }
   }
 
@@ -171,6 +184,7 @@ h3{
 }
 
 body {
+  position: relative;
   margin: 0;
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
@@ -734,6 +748,7 @@ progress {
   height: 1000px;
   margin-right: auto;
   margin-left: auto;
+  max-height: fit-content;
 }
 
 .light-container {

@@ -1,54 +1,116 @@
-<div class="hero-scene-galerie text-center h-100">
+<div class="hero-scene-galerie text-center h-100 mb-3">
    <div class="hero-scene-content text-center">
       <p>Le chef pâtissier vous invite</p>
-      <h1> Ô Gâteau</h1>
-      <button class="btn btn-primary">Réserver</button>
+      <h1> Galerie</h1>
+      <a href="/reservations" class="btn btn-primary mb-3">Réserver</a>
       </div>
 </div>
 
 <div class="container">
+   <div class="text-center">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal">Ajouter une photo</button>
+   </div>
    <div class="row row-cols-3 row-cols-lg-4">
+
       <div class="col p-3">
          <div class="image-card text-white">
             <img src="/images/cacao.jpg" alt="Cacao" class="rounded w-100">
-            <p class="titre-image">Titre</p>
+            <p class="titre-image">Cacao</p>
+            <div class="action-image-buttons">
+               <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+               <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#SuppressionPhotoModal"><i class="bi bi-trash"></i></button>
+            </div>
          </div>
       </div>
 
       <div class="col p-3">
          <div class="image-card text-white">
-            <img src="/images/cacao.jpg" alt="Cacao" class="rounded w-100">
-            <p class="titre-image">Titre</p>
+            <img src="/images/chef.jpg" alt="Chef" class="rounded w-100">
+            <p class="titre-image">Chef</p>
          </div>
       </div>
 
             <div class="col p-3">
          <div class="image-card text-white">
-            <img src="/images/cacao.jpg" alt="Cacao" class="rounded w-100">
-            <p class="titre-image">Titre</p>
+            <img src="/images/dessert.jpg" alt="Dessert" class="rounded w-100">
+            <p class="titre-image">Dessert</p>
+         </div>
+      </div>
+
+      <div class="col p-3">
+         <div class="image-card text-white">
+            <img src="/images/fruits.jpg" alt="Fruits" class="rounded w-100">
+            <p class="titre-image">Fruits</p>
          </div>
       </div>
 
       <div class="col p-3">
          <div class="image-card text-white">
             <img src="/images/cacao.jpg" alt="Cacao" class="rounded w-100">
-            <p class="titre-image">Titre</p>
+            <p class="titre-image">Cacao</p>
          </div>
       </div>
 
       <div class="col p-3">
          <div class="image-card text-white">
-            <img src="/images/cacao.jpg" alt="Cacao" class="rounded w-100">
-            <p class="titre-image">Titre</p>
+            <img src="/images/chef.jpg" alt="Chef" class="rounded w-100">
+            <p class="titre-image">Chef</p>
          </div>
       </div>
-
-      <div class="col p-3">
-         <div class="image-card text-white">
-            <img src="/images/cacao.jpg" alt="Cacao" class="rounded w-100">
-            <p class="titre-image">Titre</p>
-         </div>
-      </div>
+   <div class="text-center">
+      <a href="reservations.html" class="btn btn-primary">Réserver</a>
+   </div>
 
    </div>
+</div>
+
+<!-- Modal Edition-->
+<div class="modal fade" id="EditionPhotoModal" tabindex="-1" aria-labelledby="EditionPhotoModal" aria-hidden="true">
+<div class="modal-dialog">
+   <div class="modal-content">
+   <div class="modal-header">
+      <h2 class="modal-title fs-5" id="EditionPhotoModal">Edition de photo</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+   </div>
+   <div class="modal-body">
+      Formulaire d'édition de photo
+         <form>
+      <div class="form-group">
+         <label for="NamePhotoInput">Titre</label>
+         <input type="text" class="form-control" id="NamePhotoInput" placeholder="Tarte au citron meringuée">
+      </div>
+      <div class="form-group mb-2">
+         <label for="ImageInput">Choisir une photo</label>
+         <input type="file" class="form-control" id="ImageInput" placeholder="">
+      </div>
+      <button type="button" class="btn btn-primary">Enregistrer</button>
+   </form>
+
+   </div>
+   </div>
+</div>
+</div>
+
+<!-- Modal Suppression-->
+<div class="modal fade" id="SuppressionPhotoModal" tabindex="-1" aria-labelledby="SuppressionPhotoModal" aria-hidden="true">
+<div class="modal-dialog">
+   <div class="modal-content">
+   <div class="modal-header">
+      <h2 class="modal-title fs-5" id="SuppressionPhotoModal">Êtes-vous sûr de vouloir supprimer cette photo ?</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+   </div>
+   <div class="modal-body">
+      Formulaire d'édition de photo
+         <form>
+      <div class="form-group">
+         <label for="NamePhotoInput">Cacao</label>
+            <img src="/images/cacao.jpg" alt="Cacao" class="rounded w-100">
+      </div>
+      <button type="button" class="btn btn-danger">Supprimer</button>
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+   </form>
+
+   </div>
+   </div>
+</div>
 </div>
