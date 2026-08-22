@@ -1,0 +1,57 @@
+<div class="hero-scene-galerie text-center h-100 mb-3">
+   <div class="hero-scene-content text-center">
+      <p>Le chef pâtissier vous invite</p>
+      <h1>Ma réservation</h1>
+      </div>
+</div>
+
+<div class="container">
+   <form>
+      <div class="form-group">
+         <label for="FirstnameInput">Votre prénom</label>
+         <input disabled type="text" class="form-control" id="FirstnameInput" placeholder="Votre prénom">
+      </div>
+      <div class="form-group">
+         <label for="NameInput">Votre nom</label>
+         <input disabled type="text" class="form-control" id="NameInput" placeholder="Votre nom">
+      </div>
+
+      <div class="form-group">
+         <label for="AllergieInput">Vos allergies</label>
+         <input type="text" class="form-control" id="AllergieInput" placeholder="arachides, etc...">
+      </div>
+      <div class="form-group">
+         <label for="DateInput">Quel jour viendrez-vous ?</label>
+         <input type="date" class="form-control" id="DateInput">
+      </div>
+
+      <div class="mb-3">
+         <div class="form-check">
+         <input class="form-check-input" type="radio" name="serviceChoisi" id="midiRadio">
+         <label class="form-check-label" for="midiRadio">
+            Midi
+         </label>
+         </div>
+         <div class="form-check">
+         <input class="form-check-input" type="radio" name="serviceChoisi" id="soirRadio" checked>
+         <label class="form-check-label" for="soirRadio">
+            Soir
+         </label>
+         </div>
+
+         <div class="mb-3">
+            <label for="selectHour" class="form-label">Heure</label>
+            <select class="form-select" id>
+               <option>19:30</option>
+               <option>19:45</option>
+               <option>20:00</option>
+               <option>20:15</option>
+               <option>20:30</option>
+               <option>20:45</option>
+               <option>21:00</option>               
+            </select>
+         </div>
+
+      <button type="submit" class="btn btn-primary mt-3 mb-3">Réserver</button>
+      <button type="submit" class="btn btn-warning">Annuler</button>
+   </form>
